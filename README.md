@@ -1,0 +1,2 @@
+# 1syskadai2025
+dai1kainokadaiteisyutuyou
