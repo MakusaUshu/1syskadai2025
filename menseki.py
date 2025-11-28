@@ -1,16 +1,24 @@
 #!/usr/bin/python3
-import math
-import sys
+# SPDX-FilecopyrightText: 2025 Makusa Ushu 
+# SPDX-License-Identifer: BSD-3-Clause 
 
-a = float(sys.argv[2])
+import math 
+import sys 
 
-n = float(sys.argv[3])
+a = float(sys.argv[2]) 
+n = float(sys.argv[3]) 
+
 
 if sys.argv[1] == "L":
-    print( ( n * ( a * a ) ) / ( 4 * math.tan( math.pi / n ) ) )
+    
+    print( ( n * ( a * a ) ) / ( 4 * math.tan( math.pi / n ) ) ) 
 
-elif sys.argv[1] == "R":
-    print( ( 1 / 2 ) * a * a * math.sin( ( 2 * math.pi ) / n ) * n )
 
-else:
-    print("error")
+elif sys.argv[1] == "R": 
+
+    print( ( 1 / 2 ) * a * a * math.sin( ( 2 * math.pi ) / n ) * n ) 
+
+
+else: print("error")
+
+
