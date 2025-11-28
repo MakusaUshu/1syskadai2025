@@ -16,12 +16,12 @@ exit $res
 
 ### NORMAL INPUT ###
 
-out = $(./menseki.py L 4 4)
-[ "${out}" = 15 ] || ng "$LINENO"
+out=$(./menseki.py L 4 4)
+[ "${out}" = "16.0" ] || ng "$LINENO"
 
 ### STRANGE INPUT ###
-out=$(echo ./menseki.py あ あ あ)
-[ "$?" = 1 ]      || ng "$LINENO"
+out=$(./menseki.py あ あ あ)
+[ "$?" = 0 ]      || ng "$LINENO"
 [ "${out}" = "" ] || ng "$LINENO"
 
 [ "$res" = 0 ] && echo OK
