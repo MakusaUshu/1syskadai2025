@@ -19,6 +19,6 @@ elif sys.argv[1] == "R":
     print( ( 1 / 2 ) * a * a * math.sin( ( 2 * math.pi ) / n ) * n ) 
 
 
-else: print("error")
+else: print("最初の文字はLまたはRを入力してください")
 
 
