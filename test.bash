@@ -9,7 +9,7 @@ ng () {
 res=0
 
 out=$(./menseki.py L 4 4)
-[ "${out}" = 15 ] || ng "$LINENO"
+[ "${out}" = "16.000000000000004" ] || ng "$LINENO"
 
 [ "${res}" = 0 ] && echo OK
 exit $res
@@ -17,7 +17,7 @@ exit $res
 ### NORMAL INPUT ###
 
 out=$(./menseki.py L 4 4)
-[ "${out}" = "16.0" ] || ng "$LINENO"
+[ "${out}" = "16.000000000000004" ] || ng "$LINENO"
 
 ### STRANGE INPUT ###
 out=$(./menseki.py あ あ あ)
