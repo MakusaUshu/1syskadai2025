@@ -13,16 +13,6 @@ if not n.is_integer() or n <= 2:
     print("最後の文字は3以上の整数にしてください")
 
 
-elif not n.is_integer():
-
-    print("最後の文字は整数にしてください")
-
-
-elif n <= 2:
-
-    print("最後の文字は3以上の整数にしてください")
-
-
 elif sys.argv[1] == "L":
     
     print( ( n * ( a * a ) ) / ( 4 * math.tan( math.pi / n ) ) ) 
