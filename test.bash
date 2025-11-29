@@ -1,4 +1,4 @@
-#!/bin/bash -xv
+#!/bin/bash -xv 
 # SPDX-FilecopyrightText: 2025 Makusa Ushu
 # SPDX-License-Identifer: BSD-3-Clause
 
@@ -11,6 +11,11 @@ res=0
 out=$(./menseki.py L A A)
 [ "${out}" = "2番目、3番目の文字は数字にしてください" ] || ng "$LINENO"
 
+out=$(./menseki.py L 4 2)
+[ "${out}" = "最後の文字は3以上の整数にしてください" ] || ng "$LINENO"
+
+out=$(./menseki.py L 4 4.5)
+[ "${out}" = "最後の文字は3以上の整数にしてください" ] || ng "$LINENO"
 
 out=$(./menseki.py L 4 4)
 [ "${out}" = "16.000000000000004" ] || ng "$LINENO"
