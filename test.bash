@@ -8,21 +8,25 @@ ng () {
 
 res=0
 
-out=$(./menseki.py L 4 4)
-[ "${out}" = "16.000000000000004" ] || ng "$LINENO"
+out=$(./menseki.py L A A)
+[ "${out}" = "2番目、3番目の文字は数字にしてください" ] || ng "$LINENO"
 
-[ "${res}" = 0 ] && echo OK
-exit $res
-
-### NORMAL INPUT ###
 
 out=$(./menseki.py L 4 4)
 [ "${out}" = "16.000000000000004" ] || ng "$LINENO"
 
-### STRANGE INPUT ###
-out=$(./menseki.py あ あ あ)
-[ "$?" = 0 ]      || ng "$LINENO"
-[ "${out}" = "" ] || ng "$LINENO"
+
+out=$(./menseki.py R 2 4)
+[ "${out}" = 8.0 ] || ng "$LINENO"
+
+
+
+
+
+
+
+
+
 
 [ "$res" = 0 ] && echo OK
 exit $res
