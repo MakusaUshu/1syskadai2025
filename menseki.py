@@ -8,8 +8,12 @@ import sys
 a = float(sys.argv[2]) 
 n = float(sys.argv[3]) 
 
+if not n.is_integer():
 
-if n <= 2:
+    print("最後の文字は整数にしてください")
+
+
+elif n <= 2:
 
     print("最後の文字は3以上の整数にしてください")
 
