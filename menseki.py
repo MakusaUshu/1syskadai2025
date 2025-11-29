@@ -12,6 +12,7 @@ try:
 
 except ValueError:
     print("2番目、3番目の文字は数字にしてください")
+    sys.exit(0)
 
 
 if not n.is_integer() or n <= 2:
