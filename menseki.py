@@ -8,6 +8,7 @@ import sys
 a = float(sys.argv[2]) 
 n = float(sys.argv[3]) 
 
+
 if not n.is_integer() or n <= 2:
 
     print("最後の文字は3以上の整数にしてください")
@@ -23,6 +24,9 @@ elif sys.argv[1] == "R":
     print( ( 1 / 2 ) * a * a * math.sin( ( 2 * math.pi ) / n ) * n ) 
 
 
-else: print("最初の文字はLまたはRを入力してください")
+elif not sys.argv[1] == "L" or sys.argv[1] == "R":
+    
+    print("最初の文字はLまたはRを入力してください")
 
-
+else: 
+    print("2番目、3番目の文字は数字にしてください")
