@@ -20,14 +20,11 @@ out=$(./menseki.py L 4 4.5)
 out=$(./menseki.py L 4 4)
 [ "${out}" = "16.000000000000004" ] || ng "$LINENO"
 
-
 out=$(./menseki.py R 2 4)
 [ "${out}" = 8.0 ] || ng "$LINENO"
 
-
-
-
-
+out=$(./menseki.py A 4 4)
+[ "${out}" = "最初の文字はLまたはRを入力してください" ] || ng "$LINENO"
 
 
 
